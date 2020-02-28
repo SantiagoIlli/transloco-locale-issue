@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {TranslocoLocaleService} from '@ngneat/transloco-locale';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'transloco-locale-lib-issue';
+
+  constructor(private service: TranslocoLocaleService) {
+    this.service.setLocale('es-AR');
+
+  }
 }
